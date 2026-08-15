@@ -1,6 +1,6 @@
 # Privacy Policy for Tranza
 
-**Effective Date:** August 8, 2026  
+**Effective Date:** August 15, 2026  
 **Developer:** John Michael Gemino
 
 ---
@@ -92,18 +92,16 @@ Since all data is stored locally on your device, the security of your data also 
 
 ---
 
-## 6. Permissions
+## 6. Permissions and System Access
 
-Tranza requests the following Android permissions, each for a specific purpose:
+Tranza is designed to respect your privacy and minimizes access to your device's features:
 
-| Permission | Why It's Needed |
-|------------|----------------|
-| **Camera** | To capture receipt photos for OCR scanning and transaction record-keeping |
-| **Files and Media Access** | To select receipt images or custom wallet logos from your photo gallery, and to save backup files or CSV exports to user-selected locations |
+| Feature / Permission | Mechanism & Purpose |
+|----------------------|---------------------|
+| **Camera** | Used with your explicit permission to capture receipt photos for on-device OCR scanning and transaction record-keeping. |
+| **Photo & File Selection** | Uses the modern **Android Photo Picker** and **Storage Access Framework (SAF)**. When you choose a receipt photo, select a custom wallet logo, export CSV data, or save/restore backup files, you select specific files or folders directly through the Android system dialog. Tranza does **not** request or require broad access to your device's photo gallery or external storage. |
 
-All permissions are requested **only when you perform an action that requires them** (e.g., capturing a receipt, importing a file, or creating a backup). Permissions can be revoked at any time through your device's Settings. The App will continue to function with reduced functionality if certain permissions are denied.
-
-Tranza does not require unrestricted access to all files on your device. File access is limited to user-initiated actions such as selecting images, choosing backup locations, or importing data.
+All access is initiated solely by your explicit actions (e.g., tapping to capture a receipt, picking an image from your gallery, choosing an export directory, or selecting a backup file). Camera permission can be granted or revoked at any time through your device's Settings.
 
 ---
 
@@ -212,4 +210,4 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 
 ---
 
-*This Privacy Policy was last updated on August 8, 2026.*
+*This Privacy Policy was last updated on August 15, 2026.*
