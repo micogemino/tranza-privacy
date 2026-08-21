@@ -1,6 +1,6 @@
 # Privacy Policy for Tranza
 
-**Effective Date:** August 15, 2026  
+**Effective Date:** August 21, 2026  
 **Developer:** John Michael Gemino
 
 ---
@@ -82,9 +82,11 @@ All app data is stored on your device using the following mechanisms:
 
 ### 5.2 Security Measures
 
-- Sensitive data (premium license) is encrypted using Android Keystore-backed encryption.
+- Sensitive data (premium license entitlement & lifetime counter) is encrypted using Android Keystore-backed encryption (`FlutterSecureStorage`).
 - App data is stored within Android's sandboxed application storage, which is not accessible to other apps under normal circumstances.
 - Backup files are created only when you explicitly choose to back up your data and are saved to a location you control.
+- Backup archives include cryptographic integrity manifests (SHA-256 component hashes and HMAC signatures) to protect against accidental corruption and file tampering.
+- Android Cloud Auto-Backup is explicitly disabled (`android:allowBackup="false"`) to prevent unencrypted background cloud synchronization of your financial records.
 
 ### 5.3 Your Responsibility
 
@@ -156,7 +158,7 @@ You have full control over your data:
 
 Backup files you create are saved to your device's storage (e.g., the Downloads folder). These files persist independently of the App and will remain even after uninstalling. You are responsible for managing or deleting these backup files.
 
-Uninstalling Tranza removes the App's locally stored data from the device, subject to Android's backup and restore behavior. If you have enabled Android's automatic backup feature in your device settings, some app data may be backed up to your Google account as part of Android's standard system behavior.
+Tranza explicitly disables Android's cloud Auto-Backup (`android:allowBackup="false"`). Your bookkeeping records and transaction history are never automatically uploaded to cloud servers in the background. Uninstalling Tranza removes the App's local sandboxed data from the device.
 
 ---
 
@@ -210,4 +212,4 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 
 ---
 
-*This Privacy Policy was last updated on August 15, 2026.*
+*This Privacy Policy was last updated on August 21, 2026.*
